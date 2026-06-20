@@ -63,9 +63,23 @@ python -m http.server 8000
 | `--green` | `#79b83f` | Secondary accent (eyebrows, etc.) |
 | `--bg` | `#ffffff` | Page background |
 
+## SEO
+
+- Title, meta description, keywords, Open Graph and Twitter cards are set in `<head>`.
+- `LocalBusiness` and `FAQPage` JSON-LD structured data are included for rich results.
+- Copy targets local search (Durban, Westville, Pinetown, Durban North).
+
+## Before you go live — confirm these
+
+These are **real values used throughout the site** — verify they're correct, don't leave them assumed:
+
+- **Domain:** `https://www.phelaservices.co.za/` is used in the canonical tag, Open Graph URLs and JSON-LD. Update everywhere if the live domain differs.
+- **Email:** `hello@phelaservices.co.za` — make sure this inbox exists.
+- **Opening hours** in the JSON-LD (`Mon–Sat 08:00–17:00`) — adjust to your actual hours.
+- **Social links:** the Facebook/Instagram footer icons point to `#` — add real URLs (and to `sameAs` in the JSON-LD).
+- **Testimonials:** the three reviews are realistic examples. Replace them with **genuine customer reviews** before publishing — fabricated testimonials can breach SA consumer-protection/ASA rules.
+
 ## Notes
 
-- Testimonials, the service area, and the email (`hello@phelaservices.co.za`)
-  are **placeholders** — update before launch.
 - Icons are inline [Lucide](https://lucide.dev) SVGs (no runtime dependency).
 - Fully responsive; respects `prefers-reduced-motion`.

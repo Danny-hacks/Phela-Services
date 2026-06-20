@@ -20,6 +20,32 @@
     topbarClose.addEventListener('click', function () { topbar.classList.add('hidden'); });
   }
 
+  /* ---------- Sticky CTA bar ---------- */
+  var stickyCta = document.getElementById('stickyCta');
+  if (stickyCta) {
+    // hide the bar whenever the final CTA or footer is on screen (avoid duplicate CTAs)
+    var hideZones = new Set();
+    var zones = [document.getElementById('contact'), document.querySelector('.site-footer')].filter(Boolean);
+    var updateSticky = function () {
+      var pastHero = window.scrollY > window.innerHeight * 0.6;
+      var show = pastHero && hideZones.size === 0;
+      stickyCta.classList.toggle('show', show);
+      stickyCta.setAttribute('aria-hidden', show ? 'false' : 'true');
+      document.body.classList.toggle('cta-open', show);
+    };
+    if ('IntersectionObserver' in window) {
+      var zoneIo = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) hideZones.add(e.target); else hideZones.delete(e.target);
+        });
+        updateSticky();
+      }, { threshold: 0 });
+      zones.forEach(function (z) { zoneIo.observe(z); });
+    }
+    window.addEventListener('scroll', updateSticky, { passive: true });
+    updateSticky();
+  }
+
   /* ---------- Mobile menu ---------- */
   var hamburger = document.getElementById('hamburger');
   var mobileMenu = document.getElementById('mobileMenu');
