@@ -1,0 +1,19 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
+
+# Logs / temp
+*.log
+.cache/
+tmp/
+
+# Dependencies (if a toolchain is added later)
+node_modules/
+dist/

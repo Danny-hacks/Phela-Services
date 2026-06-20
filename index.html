@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Phela Services — Premium Laundry, Cleaning & Rental Care</title>
+  <meta name="description" content="Phela Services: professional laundry, garment care, carpet cleaning & restoration, blanket cleaning and chairs & tables rental — collected from your doorstep with free collection and delivery." />
+  <link rel="icon" type="image/svg+xml" href="assets/img/favicon.svg" />
+
+  <!-- Fonts: Manrope (display) + Inter (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+
+  <!-- ============ ANNOUNCEMENT BAR ============ -->
+  <div class="topbar" id="topbar">
+    <p>Free collection &amp; delivery — call <a href="tel:+27822679862">082&nbsp;267&nbsp;9862</a> for an instant quote.</p>
+    <button class="topbar-close" id="topbarClose" aria-label="Dismiss announcement">&times;</button>
+  </div>
+
+  <!-- ============ HEADER ============ -->
+  <header class="site-header" id="header">
+    <div class="container header-inner">
+      <a href="#top" class="brand" aria-label="Phela Services home">
+        <img src="assets/img/phela-logo.png" alt="Phela Services" class="brand-logo" />
+      </a>
+
+      <nav class="nav-desktop" aria-label="Primary">
+        <a href="#top" class="active">Home</a>
+        <a href="#services" class="has-caret">Services
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9l6 6 6-6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="#how">How It Works</a>
+        <a href="#rentals">Rentals</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+27822679862" class="header-phone">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1z"/></svg>
+          082 267 9862
+        </a>
+        <a href="#contact" class="btn-book">Book Now</a>
+      </div>
+
+      <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ============ MOBILE MENU ============ -->
+  <div class="mobile-menu" id="mobileMenu" aria-hidden="true">
+    <nav>
+      <a href="#top">Home</a>
+      <a href="#services">Services</a>
+      <a href="#how">How It Works</a>
+      <a href="#rentals">Rentals</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="mobile-cta">
+      <a href="https://wa.me/27822679862" class="btn btn-ghost" target="_blank" rel="noopener">WhatsApp Us</a>
+      <a href="#contact" class="btn btn-primary">Book a Collection</a>
+    </div>
+    <p class="mobile-phone">Call <a href="tel:+27822679862">082 267 9862</a></p>
+  </div>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <span class="hero-eyebrow reveal">Free collection &amp; delivery · Premium care since day one</span>
+        <h1 class="hero-title reveal">
+          Professional laundry, cleaning &amp;<br/>
+          rental care — collected from<br/>
+          <span class="accent-word">your doorstep.</span>
+        </h1>
+        <p class="hero-reviews reveal">
+          Garment-safe care&nbsp; · &nbsp;Carpet &amp; blanket specialists&nbsp; · &nbsp;Chairs &amp; tables rental
+        </p>
+        <div class="hero-actions reveal">
+          <a href="#contact" class="btn btn-primary">
+            <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l7 3v6c0 4.4-3 8.3-7 9.6C8 19.3 5 15.4 5 11V5z"/></svg>
+            Book a Collection
+          </a>
+          <a href="https://wa.me/27822679862?text=Hi%20Phela%2C%20I%27d%20like%20a%20free%20quote" class="btn btn-outline-light" target="_blank" rel="noopener">
+            Get a Free Quote
+          </a>
+        </div>
+        <p class="hero-note reveal">We reply on WhatsApp within minutes.</p>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM / CONTEXT ============ -->
+    <section class="context">
+      <div class="container context-grid">
+        <div class="context-intro reveal">
+          <span class="eyebrow">Made for busy lives</span>
+          <h2 class="section-title">Life gets busy.<br/>We take care of the rest.</h2>
+          <p class="context-lead">
+            From tough carpet stains and bulky blankets to delicate garments and event
+            setups — we handle it all with care and convenience. You relax. We deliver.
+          </p>
+        </div>
+        <ul class="context-list reveal">
+          <li>
+            <span class="context-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7.5V12l3 1.8"/></svg></span>
+            <p><strong>Little time?</strong> We collect from your doorstep.</p>
+          </li>
+          <li>
+            <span class="context-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5S12.5 5 12 2.5C11.5 5 10 7.4 8 9S5 13 5 15a7 7 0 0 0 7 7z"/></svg></span>
+            <p><strong>Tough stains &amp; odours?</strong> We have the right solutions.</p>
+          </li>
+          <li>
+            <span class="context-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg></span>
+            <p><strong>Delicate fabrics?</strong> We treat every item with care.</p>
+          </li>
+          <li>
+            <span class="context-ico"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4.5" width="18" height="17" rx="2.5"/><path d="M3 9.5h18M8 2.5v4M16 2.5v4M8.8 15.5l2.2 2.2 4.2-4.4"/></svg></span>
+            <p><strong>Planning an event?</strong> We've got the perfect setup.</p>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">Our services</span>
+          <h2 class="section-title">Expert care. Outstanding results.</h2>
+          <p class="section-intro">Premium cleaning and rental solutions, tailored to your home and your occasions.</p>
+        </div>
+
+        <div class="service-grid">
+
+          <article class="service-card reveal">
+            <div class="service-card-img">
+              <img src="assets/img/laundry.jpg" alt="Laundry ready for collection" />
+              <span class="service-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="2.5" width="16" height="19" rx="2.5"/><path d="M7 6h.01M10 6h.01"/><circle cx="12" cy="14" r="4.5"/><circle cx="12" cy="14" r="1.6"/></svg>
+              </span>
+            </div>
+            <div class="service-card-body">
+              <span class="service-no">01</span>
+              <h3>Laundry Collection &amp; Delivery</h3>
+              <p>Fresh, clean laundry collected from your home and returned neatly folded.</p>
+              <a href="#contact" class="service-link">Book this service
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card-img">
+              <img src="assets/img/hero-blankets.jpg" alt="Folded knitwear and garments" />
+              <span class="service-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.38 3.46 16 2a4 4 0 0 1-8 0L3.62 3.46a2 2 0 0 0-1.34 2.23l.58 3.47a1 1 0 0 0 .99.84H6v10a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2V10h2.15a1 1 0 0 0 .99-.84l.58-3.47a2 2 0 0 0-1.34-2.23z"/></svg>
+              </span>
+            </div>
+            <div class="service-card-body">
+              <span class="service-no">02</span>
+              <h3>Garment Care</h3>
+              <p>Special fabric treatments. Safely washed, pressed &amp; protected so good pieces last.</p>
+              <a href="#contact" class="service-link">Book this service
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card-img">
+              <img src="assets/img/carpet-blanket.jpg" alt="Clean home interior with carpet" />
+              <span class="service-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5S12.5 5 12 2.5C11.5 5 10 7.4 8 9S5 13 5 15a7 7 0 0 0 7 7z"/></svg>
+              </span>
+            </div>
+            <div class="service-card-body">
+              <span class="service-no">03</span>
+              <h3>Carpet Cleaning</h3>
+              <p>Deep cleaning that removes dirt, dust and allergens for a fresher, healthier home.</p>
+              <a href="#contact" class="service-link">Book this service
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card-img">
+              <img src="assets/img/hero-premium.jpg" alt="Freshly cleaned folded blankets" />
+              <span class="service-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 7l10 5 10-5-10-5z"/><path d="m2 12 10 5 10-5"/><path d="m2 17 10 5 10-5"/></svg>
+              </span>
+            </div>
+            <div class="service-card-body">
+              <span class="service-no">04</span>
+              <h3>Blanket Cleaning</h3>
+              <p>Deep clean &amp; sanitise for warmth that feels fresh, soft and hygienic again.</p>
+              <a href="#contact" class="service-link">Book this service
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card-img">
+              <img src="assets/img/carpet-restoration.jpg" alt="Restored patterned carpet" />
+              <span class="service-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 4.6L18.5 9l-4.6 1.4L12 15l-1.9-4.6L5.5 9l4.6-1.4z"/><path d="M5 16l.7 1.8L7.5 18.5 5.7 19.2 5 21l-.7-1.8L2.5 18.5l1.8-.7z"/></svg>
+              </span>
+            </div>
+            <div class="service-card-body">
+              <span class="service-no">05</span>
+              <h3>Carpet Restoration</h3>
+              <p>Specialist treatments that revive patterned carpets — bringing back colour &amp; texture.</p>
+              <a href="#contact" class="service-link">Book this service
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+          <article class="service-card reveal">
+            <div class="service-card-img">
+              <img src="assets/img/chairs-tables.jpg" alt="Event tables and chairs set up" />
+              <span class="service-badge">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 11a2 2 0 0 0-2 2v2a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-2a2 2 0 0 0-2-2"/><path d="M5 11V7a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2v4"/><path d="M6 17v2M18 17v2"/></svg>
+              </span>
+            </div>
+            <div class="service-card-body">
+              <span class="service-no">06</span>
+              <h3>Chairs &amp; Tables Rental</h3>
+              <p>Quality chairs &amp; tables for every occasion. Clean, sturdy and event-ready.</p>
+              <a href="#rentals" class="service-link">Check availability
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+              </a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHY PHELA ============ -->
+    <section class="why" id="why">
+      <div class="container why-grid">
+        <div class="why-head reveal">
+          <span class="eyebrow">Why choose Phela</span>
+          <h2 class="section-title">Trusted by homes &amp; businesses across the community.</h2>
+        </div>
+
+        <div class="why-stats reveal">
+          <div class="wstat">
+            <span class="wstat-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 17h4V5H2v12h3"/><path d="M14 9h4l3 3v5h-3"/><circle cx="7.5" cy="17.5" r="2.2"/><circle cx="17.5" cy="17.5" r="2.2"/></svg>
+            </span>
+            <span class="wstat-num">100%</span>
+            <span class="wstat-label">Free Collection &amp; Delivery</span>
+          </div>
+          <div class="wstat">
+            <span class="wstat-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.4-3 8.3-7 9.6C8 19.3 5 15.4 5 11V6z"/><path d="M9.3 12l1.8 1.8 3.6-3.7"/></svg>
+            </span>
+            <span class="wstat-num small">Fabric-Safe Care</span>
+            <span class="wstat-label">Gentle on every fibre</span>
+          </div>
+          <div class="wstat">
+            <span class="wstat-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 4.6L18.5 9l-4.6 1.4L12 15l-1.9-4.6L5.5 9l4.6-1.4z"/><path d="M5 16l.7 1.8L7.5 18.5 5.7 19.2 5 21l-.7-1.8L2.5 18.5l1.8-.7z"/></svg>
+            </span>
+            <span class="wstat-num small">Deep Clean Results</span>
+            <span class="wstat-label">Hygienic, fresh &amp; long-lasting</span>
+          </div>
+          <div class="wstat">
+            <span class="wstat-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8z"/></svg>
+            </span>
+            <span class="wstat-num small">Reliable Communication</span>
+            <span class="wstat-label">We keep you updated</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="how" id="how">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">How it works</span>
+          <h2 class="section-title">Simple, seamless &amp; convenient.</h2>
+        </div>
+
+        <div class="steps">
+          <div class="step reveal">
+            <span class="step-node wa">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.07-1.33A10 10 0 1 0 12 2zm0 18.2c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3 .79.8-2.93-.2-.31A8.2 8.2 0 1 1 12 20.2z"/><path d="M17.5 14.4c-.3-.15-1.7-.84-2-.93-.27-.1-.47-.15-.66.15-.2.3-.76.93-.93 1.12-.17.2-.34.22-.64.07-1.77-.88-2.93-1.58-4.1-3.58-.31-.53.31-.5.89-1.65.1-.2.05-.37-.02-.52-.08-.15-.66-1.6-.9-2.18-.24-.57-.48-.5-.66-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.27-.2-.57-.34z"/></svg>
+              <i class="step-count">1</i>
+            </span>
+            <h3>Message or Call</h3>
+            <p>WhatsApp us or call <a href="tel:+27822679862">082&nbsp;267&nbsp;9862</a> to request a collection.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-node">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="16" rx="2"/><path d="M4 10h16M8 3v4M16 3v4"/></svg>
+              <i class="step-count">2</i>
+            </span>
+            <h3>Schedule Collection</h3>
+            <p>Choose a time that works for you. We collect from your doorstep.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-node">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l1.9 4.6L18.5 9l-4.6 1.4L12 15l-1.9-4.6L5.5 9l4.6-1.4z"/><path d="M5 16l.7 1.8L7.5 18.5 5.7 19.2 5 21l-.7-1.8L2.5 18.5l1.8-.7z"/></svg>
+              <i class="step-count">3</i>
+            </span>
+            <h3>Expert Care</h3>
+            <p>We clean, treat &amp; restore your items with premium techniques.</p>
+          </div>
+          <div class="step reveal">
+            <span class="step-node">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 17h4V5H2v12h3"/><path d="M14 9h4l3 3v5h-3"/><circle cx="7.5" cy="17.5" r="2.2"/><circle cx="17.5" cy="17.5" r="2.2"/></svg>
+              <i class="step-count">4</i>
+            </span>
+            <h3>Delivery / Setup</h3>
+            <p>We return your items fresh, on time. Rentals delivered &amp; set up.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SIGNATURE CARE ============ -->
+    <section class="signature">
+      <div class="container signature-grid">
+        <div class="signature-media reveal">
+          <div class="signature-img">
+            <img src="assets/img/cleaning-person.jpg" alt="A Phela team member cleaning with care" />
+          </div>
+          <div class="signature-badge">
+            <span class="signature-badge-ico">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-4.35-9.5-8.5C1 9.4 3 5.5 6.6 5.5c2 0 3 1.1 3.4 2 .4-.9 1.4-2 3.4-2 3.6 0 5.6 3.9 4.1 7C19 16.65 12 21 12 21z"/></svg>
+            </span>
+            <div>
+              <strong>Handled with care</strong>
+              <span>Every item, checked by hand</span>
+            </div>
+          </div>
+        </div>
+        <div class="signature-copy reveal">
+          <span class="eyebrow">Our promise</span>
+          <h2 class="section-title">Care that feels personal.</h2>
+          <p>
+            Every item passes through hands that pay attention — from delicate garments
+            and heavy blankets to patterned carpets and event linens.
+          </p>
+          <p>
+            We treat your things the way we'd treat our own: gently, thoroughly, and
+            returned exactly when we promise. That's the difference you feel.
+          </p>
+          <ul class="signature-points">
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 6"/></svg>
+              Hand-checked, item by item
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 6"/></svg>
+              Gentle, fabric-safe process
+            </li>
+            <li>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12l5 5L20 6"/></svg>
+              Returned exactly when promised
+            </li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Experience the Phela difference</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ RENTALS ============ -->
+    <section class="rentals" id="rentals">
+      <div class="container rentals-card reveal">
+        <div class="rentals-copy">
+          <span class="eyebrow">Event made easy</span>
+          <h2 class="section-title light">Chairs &amp; Tables for Every Occasion</h2>
+          <p>
+            From intimate gatherings to big celebrations — we provide clean, sturdy,
+            event-ready rentals that elevate your occasion.
+          </p>
+          <ul class="rental-tags">
+            <li>Weddings</li>
+            <li>Functions</li>
+            <li>Parties</li>
+            <li>Community gatherings</li>
+          </ul>
+          <div class="rental-actions">
+            <a href="https://wa.me/27822679862?text=Hi%20Phela%2C%20I%27d%20like%20to%20check%20rental%20availability" class="btn btn-primary" target="_blank" rel="noopener">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 9h16M8 3v4M16 3v4" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              Check Rental Availability
+            </a>
+            <a href="tel:+27822679862" class="rental-link">or call 082 267 9862 →</a>
+          </div>
+        </div>
+        <div class="rentals-media">
+          <img src="assets/img/chairs-tables.jpg" alt="Elegant event setup with chairs and tables" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="testimonials">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="eyebrow">What clients say</span>
+          <h2 class="section-title">Real results. Real satisfaction.</h2>
+          <p class="section-intro">Trusted by local homes and event hosts. <em>(Placeholder reviews — easy to edit.)</em></p>
+        </div>
+
+        <div class="quote-grid">
+          <figure class="quote reveal">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Phela Services collected my laundry and delivered it back smelling amazing. So convenient and professional."</blockquote>
+            <figcaption>— Nomsa M. <span>Westville</span></figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <div class="stars">★★★★★</div>
+            <blockquote>"Our carpets look brand new! The team was on time, friendly and very thorough. Highly recommend."</blockquote>
+            <figcaption>— Paul R. <span>Pinetown</span></figcaption>
+          </figure>
+          <figure class="quote reveal">
+            <div class="stars">★★★★★</div>
+            <blockquote>"The chairs and tables were perfect for our event. Clean, sturdy and delivered exactly as promised."</blockquote>
+            <figcaption>— Lindiwe S. <span>Durban North</span></figcaption>
+          </figure>
+        </div>
+
+        <div class="quote-dots reveal" aria-hidden="true">
+          <span class="dot active"></span><span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq">
+      <div class="container faq-grid">
+        <div class="faq-head reveal">
+          <span class="eyebrow">Good to know</span>
+          <h2 class="section-title">Frequently asked questions.</h2>
+          <p class="section-intro">Still unsure? <a href="https://wa.me/27822679862" target="_blank" rel="noopener">Message us on WhatsApp.</a></p>
+        </div>
+
+        <div class="faq-list reveal">
+          <details class="faq-item">
+            <summary>Do you collect and deliver?<span class="faq-icon"></span></summary>
+            <p>Yes — free collection and delivery is included. We collect from your doorstep and return your items fresh.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do I book?<span class="faq-icon"></span></summary>
+            <p>Message or call us on 082 267 9862. We confirm your items, location and a collection time that suits you.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you clean carpets and blankets?<span class="faq-icon"></span></summary>
+            <p>Absolutely. We deep-clean carpets and rugs, restore patterned carpets, and professionally clean blankets.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can you treat delicate garments?<span class="faq-icon"></span></summary>
+            <p>Yes. Special and delicate fabrics receive careful, tailored treatment, washing, pressing and protection.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Do you rent chairs and tables?<span class="faq-icon"></span></summary>
+            <p>We do — clean, sturdy and event-ready chairs and tables for functions, parties and gatherings.</p>
+          </details>
+          <details class="faq-item">
+            <summary>How do I get a price?<span class="faq-icon"></span></summary>
+            <p>Send us a quick message with what you need. We'll give you a clear, fair quote — no surprises.</p>
+          </details>
+          <details class="faq-item">
+            <summary>Can I book through WhatsApp?<span class="faq-icon"></span></summary>
+            <p>Yes — WhatsApp is the easiest way. Tap any WhatsApp button on this page to start.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="final-cta" id="contact">
+      <div class="container final-inner reveal">
+        <div class="final-media"><img src="assets/img/hero-premium.jpg" alt="Fresh, neatly folded laundry" /></div>
+        <div class="final-copy">
+          <h2 class="final-title">Fresh laundry. Cleaner carpets. Easier events.</h2>
+          <p>Your time is valuable. Let us handle the rest.</p>
+          <div class="final-actions">
+            <a href="https://wa.me/27822679862?text=Hi%20Phela%2C%20I%27d%20like%20to%20book%20a%20collection" class="btn btn-green" target="_blank" rel="noopener">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2l7 3v6c0 4.4-3 8.3-7 9.6C8 19.3 5 15.4 5 11V5z"/></svg>
+              Book a Collection
+            </a>
+            <a href="https://wa.me/27822679862" class="btn btn-outline-light" target="_blank" rel="noopener">
+              <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.07-1.33A10 10 0 1 0 12 2zm0 18.2c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3 .79.8-2.93-.2-.31A8.2 8.2 0 1 1 12 20.2z"/></svg>
+              WhatsApp 082 267 9862
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <img src="assets/img/phela-logo.png" alt="Phela Services" class="footer-logo" />
+        <p class="footer-tag">Laundry &amp; Cleaning Services · Chairs &amp; Tables Rental</p>
+        <p>Free collection. Premium care. Delivered with pride.</p>
+        <div class="socials">
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 9h3V6h-3c-2.2 0-3.5 1.3-3.5 3.6V11H8v3h2.5v7h3v-7H16l.5-3h-3V9.8c0-.6.3-.8.9-.8z"/></svg></a>
+          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="16" height="16" rx="5" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3.4" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="17" cy="7" r="1.2"/></svg></a>
+          <a href="https://wa.me/27822679862" target="_blank" rel="noopener" aria-label="WhatsApp"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.07-1.33A10 10 0 1 0 12 2zm0 18.2c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3 .79.8-2.93-.2-.31A8.2 8.2 0 1 1 12 20.2z"/><path d="M17.5 14.4c-.3-.15-1.7-.84-2-.93-.27-.1-.47-.15-.66.15-.2.3-.76.93-.93 1.12-.17.2-.34.22-.64.07-1.77-.88-2.93-1.58-4.1-3.58-.31-.53.31-.5.89-1.65.1-.2.05-.37-.02-.52-.08-.15-.66-1.6-.9-2.18-.24-.57-.48-.5-.66-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.27-.2-.57-.34z"/></svg></a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h4>Services</h4>
+        <a href="#services">Laundry Collection &amp; Delivery</a>
+        <a href="#services">Garment Care</a>
+        <a href="#services">Carpet Cleaning</a>
+        <a href="#services">Blanket Cleaning</a>
+        <a href="#services">Carpet Restoration</a>
+        <a href="#rentals">Chairs &amp; Tables Rental</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <a href="#top">Home</a>
+        <a href="#services">Services</a>
+        <a href="#how">How It Works</a>
+        <a href="#rentals">Rentals</a>
+        <a href="#contact">Contact</a>
+      </div>
+
+      <div class="footer-col">
+        <h4>Contact Us</h4>
+        <a href="tel:+27822679862" class="footer-contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.4 0 .8-.3 1.1z"/></svg>082 267 9862</a>
+        <a href="mailto:hello@phelaservices.co.za" class="footer-contact"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M4 7l8 6 8-6" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>hello@phelaservices.co.za</a>
+        <span class="footer-contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s7-6.5 7-11a7 7 0 1 0-14 0c0 4.5 7 11 7 11z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="10" r="2.4" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>Durban &amp; Surrounding Areas</span>
+        <span class="footer-contact"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 13h11V6H3zM14 9h3l3 3v1h-6z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="7" cy="17" r="1.6"/><circle cx="17" cy="17" r="1.6"/></svg>Free Collection &amp; Delivery</span>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> Phela Services. All rights reserved.</span>
+      <span>Designed with care for our community.</span>
+    </div>
+  </footer>
+
+  <!-- Floating WhatsApp (mobile) -->
+  <a href="https://wa.me/27822679862" class="wa-float" target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.6 15.06L2 22l5.07-1.33A10 10 0 1 0 12 2zm0 18.2c-1.5 0-2.97-.4-4.25-1.16l-.3-.18-3 .79.8-2.93-.2-.31A8.2 8.2 0 1 1 12 20.2z"/><path d="M17.5 14.4c-.3-.15-1.7-.84-2-.93-.27-.1-.47-.15-.66.15-.2.3-.76.93-.93 1.12-.17.2-.34.22-.64.07-1.77-.88-2.93-1.58-4.1-3.58-.31-.53.31-.5.89-1.65.1-.2.05-.37-.02-.52-.08-.15-.66-1.6-.9-2.18-.24-.57-.48-.5-.66-.5h-.57c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.49 0 1.47 1.07 2.89 1.22 3.09.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.7.62.71.23 1.36.2 1.87.12.57-.08 1.7-.69 1.94-1.36.24-.67.24-1.24.17-1.36-.07-.12-.27-.2-.57-.34z"/></svg>
+  </a>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
