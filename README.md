@@ -12,7 +12,10 @@ Static site: plain HTML, CSS and vanilla JavaScript. No build step.
 
 ```
 .
-├── index.html                 # Single-page site (all sections)
+├── index.html                 # Home (overview of both service lines)
+├── cleaning.html              # Cleaning & care: description, services, how-it-works
+├── rentals.html               # Event rentals: chairs & tables, how-it-works
+├── contact.html               # Contact + quote form
 ├── README.md
 ├── .gitignore
 ├── assets/
@@ -79,7 +82,19 @@ These are **real values used throughout the site** — verify they're correct, d
 - **Social links:** the Facebook/Instagram footer icons point to `#` — add real URLs (and to `sameAs` in the JSON-LD).
 - **Testimonials:** the three reviews are realistic examples. Replace them with **genuine customer reviews** before publishing — fabricated testimonials can breach SA consumer-protection/ASA rules.
 
+## Contact form
+
+The form on `contact.html` is **no-backend**: on submit it composes a pre-filled
+WhatsApp message and opens `wa.me/27822679862`. This works immediately with no
+server. If you'd rather capture leads by email/database, point the form's
+`action` at a service like [Formspree](https://formspree.io) or add a backend —
+the JS handler is in `assets/js/main.js` (`contactForm`).
+
+Service cards deep-link with `contact.html?service=...` to pre-select the dropdown.
+
 ## Notes
 
+- Multi-page: shared header/footer/WhatsApp widget are duplicated per page (static site, no templating). Update all pages if you change shared chrome.
+- A WhatsApp chat widget (bottom-right) is on every page; the bare floating button was replaced by it.
 - Icons are inline [Lucide](https://lucide.dev) SVGs (no runtime dependency).
 - Fully responsive; respects `prefers-reduced-motion`.

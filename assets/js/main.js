@@ -25,7 +25,7 @@
   if (stickyCta) {
     // hide the bar whenever the final CTA or footer is on screen (avoid duplicate CTAs)
     var hideZones = new Set();
-    var zones = [document.getElementById('contact'), document.querySelector('.site-footer')].filter(Boolean);
+    var zones = [document.querySelector('.final-cta'), document.querySelector('.site-footer')].filter(Boolean);
     var updateSticky = function () {
       var pastHero = window.scrollY > window.innerHeight * 0.6;
       var show = pastHero && hideZones.size === 0;
@@ -125,4 +125,67 @@
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ---------- WhatsApp chat widget ---------- */
+  var waWidget = document.getElementById('waWidget');
+  if (waWidget) {
+    var waToggle = document.getElementById('waToggle');
+    var waClose = document.getElementById('waClose');
+    var setWa = function (open) {
+      waWidget.classList.toggle('open', open);
+      waToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    };
+    waToggle.addEventListener('click', function () { setWa(!waWidget.classList.contains('open')); });
+    if (waClose) waClose.addEventListener('click', function () { setWa(false); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') setWa(false);
+    });
+    document.addEventListener('click', function (e) {
+      if (waWidget.classList.contains('open') && !waWidget.contains(e.target)) setWa(false);
+    });
+  }
+
+  /* ---------- Contact / quote form → WhatsApp ---------- */
+  var contactForm = document.getElementById('contactForm');
+  if (contactForm) {
+    // Pre-select service from ?service= URL param (e.g. from a service card)
+    var params = new URLSearchParams(window.location.search);
+    var preset = params.get('service');
+    if (preset) {
+      var sel = contactForm.querySelector('#cf-service');
+      if (sel) {
+        Array.prototype.forEach.call(sel.options, function (opt) {
+          if (opt.text.trim().toLowerCase() === preset.trim().toLowerCase()) opt.selected = true;
+        });
+      }
+    }
+
+    contactForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var f = contactForm;
+      var val = function (id) { var el = f.querySelector('#' + id); return el ? el.value.trim() : ''; };
+      var name = val('cf-name');
+      var phone = val('cf-phone');
+      var service = val('cf-service');
+      var area = val('cf-area');
+      var message = val('cf-message');
+
+      var lines = [
+        'Hi Phela Services, I\'d like to request a quote / collection.',
+        '',
+        'Name: ' + name,
+        'Phone: ' + phone,
+        service ? 'Service: ' + service : '',
+        area ? 'Area: ' + area : '',
+        message ? 'Details: ' + message : ''
+      ].filter(Boolean);
+
+      var url = 'https://wa.me/27822679862?text=' + encodeURIComponent(lines.join('\n'));
+      window.open(url, '_blank', 'noopener');
+
+      var ok = document.getElementById('formSuccess');
+      if (ok) ok.classList.add('show');
+      f.reset();
+    });
+  }
 })();
