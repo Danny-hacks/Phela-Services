@@ -171,7 +171,7 @@
       var message = val('cf-message');
 
       var lines = [
-        'Hi Phela Services, I\'d like to request a quote / collection.',
+        'Hi Gosephela Services, I\'d like to request a quote / booking.',
         '',
         'Name: ' + name,
         'Phone: ' + phone,
@@ -187,5 +187,106 @@
       if (ok) ok.classList.add('show');
       f.reset();
     });
+  }
+
+  /* ---------- Gallery: before/after pagination (6 per page) ---------- */
+  var galGrid = document.getElementById('galleryGrid');
+  if (galGrid) {
+    var perPage = 6;
+    var cards = Array.prototype.slice.call(galGrid.querySelectorAll('.ba-card'));
+    var pager = document.getElementById('galleryPagination');
+    var totalPages = Math.ceil(cards.length / perPage);
+    var current = 1;
+
+    var showPage = function (p) {
+      current = Math.min(Math.max(1, p), totalPages);
+      cards.forEach(function (c, i) {
+        var onPage = (Math.floor(i / perPage) + 1) === current;
+        c.style.display = onPage ? '' : 'none';
+        if (onPage) c.classList.add('in'); // ensure visible (skip reveal lock)
+      });
+      buildPager();
+    };
+
+    function makeBtn(html, label, onClick, opts) {
+      var b = document.createElement('button');
+      b.innerHTML = html;
+      if (label) b.setAttribute('aria-label', label);
+      if (opts && opts.cls) b.className = opts.cls;
+      if (opts && opts.disabled) b.disabled = true;
+      if (opts && opts.current) b.setAttribute('aria-current', 'page');
+      b.addEventListener('click', onClick);
+      return b;
+    }
+
+    function goto(p) {
+      showPage(p);
+      galGrid.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function buildPager() {
+      if (!pager || totalPages <= 1) return;
+      pager.innerHTML = '';
+      pager.appendChild(makeBtn('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M15 6l-6 6 6 6"/></svg>', 'Previous page',
+        function () { goto(current - 1); }, { cls: 'pg-arrow', disabled: current === 1 }));
+      for (var i = 1; i <= totalPages; i++) {
+        (function (n) {
+          pager.appendChild(makeBtn(String(n), 'Page ' + n, function () { goto(n); },
+            { cls: n === current ? 'active' : '', current: n === current }));
+        })(i);
+      }
+      pager.appendChild(makeBtn('<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9 6l6 6-6 6"/></svg>', 'Next page',
+        function () { goto(current + 1); }, { cls: 'pg-arrow', disabled: current === totalPages }));
+    }
+
+    if (totalPages > 1) showPage(1);
+
+    /* ---------- Lightbox (full-screen viewer — scoped to the clicked pair) ---------- */
+    var lightbox = document.getElementById('lightbox');
+    if (lightbox) {
+      var lbImg = document.getElementById('lbImg');
+      var lbCounter = document.getElementById('lbCounter');
+      var lbSet = [];   // the two images of the clicked card
+      var lbIdx = 0;
+
+      var renderLb = function (i) {
+        lbIdx = (i + lbSet.length) % lbSet.length;
+        lbImg.src = lbSet[lbIdx].src;
+        lbImg.alt = lbSet[lbIdx].alt || '';
+        if (lbCounter) lbCounter.textContent = (lbIdx === 0 ? 'Before' : 'After') + '  ·  ' + (lbIdx + 1) + ' / ' + lbSet.length;
+      };
+      var openLb = function (set, i) {
+        lbSet = set;
+        renderLb(i);
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+      };
+      var closeLb = function () {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+      };
+
+      // each image opens only its own card's before/after pair
+      Array.prototype.forEach.call(galGrid.querySelectorAll('.ba-img img'), function (im) {
+        im.addEventListener('click', function () {
+          var pair = im.closest('.ba-pair');
+          if (!pair) return;
+          var imgs = Array.prototype.slice.call(pair.querySelectorAll('img'));
+          openLb(imgs, imgs.indexOf(im));
+        });
+      });
+      document.getElementById('lbClose').addEventListener('click', closeLb);
+      document.getElementById('lbPrev').addEventListener('click', function (e) { e.stopPropagation(); renderLb(lbIdx - 1); });
+      document.getElementById('lbNext').addEventListener('click', function (e) { e.stopPropagation(); renderLb(lbIdx + 1); });
+      lightbox.addEventListener('click', function (e) { if (e.target === lightbox) closeLb(); });
+      document.addEventListener('keydown', function (e) {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLb();
+        else if (e.key === 'ArrowLeft') renderLb(lbIdx - 1);
+        else if (e.key === 'ArrowRight') renderLb(lbIdx + 1);
+      });
+    }
   }
 })();

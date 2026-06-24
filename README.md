@@ -1,10 +1,14 @@
-# Phela Services — Website
+# Gosephela Services — Website
 
-Premium marketing site for **Phela Services**: laundry, garment care, carpet
-cleaning & restoration, blanket cleaning, and chairs & tables rental — with free
-doorstep collection and delivery.
+Marketing site for **Gosephela Services** (*"We leave spaces looking new"*):
+cleaning, laundry, and rug & carpet care for **homes and businesses** across
+**Alberton, Sandton & Gauteng** — deep, end-of-tenancy, commercial and regular
+domestic cleaning, plus free laundry collection & delivery.
 
 Static site: plain HTML, CSS and vanilla JavaScript. No build step.
+
+> Rebranded from "Phela Services". External accounts (Facebook page, Bark reviews)
+> are still named **Phela Services** — those URLs are intentionally left as-is.
 
 ---
 
@@ -12,10 +16,10 @@ Static site: plain HTML, CSS and vanilla JavaScript. No build step.
 
 ```
 .
-├── index.html                 # Home (overview of both service lines)
-├── cleaning.html              # Cleaning & care: description, services, how-it-works
-├── rentals.html               # Event rentals: chairs & tables, how-it-works
-├── contact.html               # Contact + quote form
+├── index.html                 # Home (services, residential/commercial, reviews, FAQ)
+├── cleaning.html              # Cleaning services + how-it-works
+├── gallery.html               # Before/after gallery of work (placeholder images)
+├── contact.html               # Contact / quote form
 ├── README.md
 ├── .gitignore
 ├── assets/
@@ -66,21 +70,34 @@ python -m http.server 8000
 | `--green` | `#79b83f` | Secondary accent (eyebrows, etc.) |
 | `--bg` | `#ffffff` | Page background |
 
+## Key integrations
+
+- **Online booking (Picktime):** all primary "Book Online" buttons open
+  `https://www.picktime.com/b30ed5c2-f4e1-431e-b812-d000f8c9edb4` in a new tab.
+  Search that URL to change it.
+- **Reviews (Bark):** the "Read our reviews" buttons + footer Reviews link point to
+  the Bark profile. Also listed in `sameAs` in the JSON-LD.
+- **Facebook:** footer FB icon links to the page. Instagram is still `#` (add when ready).
+
 ## SEO
 
 - Title, meta description, keywords, Open Graph and Twitter cards are set in `<head>`.
-- `LocalBusiness` and `FAQPage` JSON-LD structured data are included for rich results.
-- Copy targets local search (Durban, Westville, Pinetown, Durban North).
+- `LocalBusiness` (with `sameAs` + `ReserveAction` booking) and `FAQPage` JSON-LD are included.
+- Copy targets local search: **Alberton, Sandton, Johannesburg, Gauteng**.
 
 ## Before you go live — confirm these
 
-These are **real values used throughout the site** — verify they're correct, don't leave them assumed:
-
-- **Domain:** `https://www.phelaservices.co.za/` is used in the canonical tag, Open Graph URLs and JSON-LD. Update everywhere if the live domain differs.
-- **Email:** `hello@phelaservices.co.za` — make sure this inbox exists.
-- **Opening hours** in the JSON-LD (`Mon–Sat 08:00–17:00`) — adjust to your actual hours.
-- **Social links:** the Facebook/Instagram footer icons point to `#` — add real URLs (and to `sameAs` in the JSON-LD).
-- **Testimonials:** the three reviews are realistic examples. Replace them with **genuine customer reviews** before publishing — fabricated testimonials can breach SA consumer-protection/ASA rules.
+- **New logo:** the logo file is still `assets/img/phela-logo.png` (old Phela mark).
+  Drop the new Gosephela logo in and either keep that filename or rename and update
+  the `<img src>` refs (header + footer on all 4 pages).
+- **Domain:** `https://www.phelaservices.co.za/` is still used in canonical/OG/JSON-LD.
+  Update to the live Gosephela domain everywhere if it differs.
+- **Email:** `hello@phelaservices.co.za` — confirm/replace the inbox.
+- **Opening hours** in the JSON-LD (`Mon–Sat 08:00–17:00`) — adjust to actual hours.
+- **Gallery photos:** `gallery.html` uses **placeholder** before/after pairs from the
+  existing image set — swap in real before-and-after photos (`assets/img/`).
+- **Testimonials:** the on-page quotes are realistic examples — replace with genuine
+  reviews (the Bark link already shows real ones) before publishing.
 
 ## Contact form
 
