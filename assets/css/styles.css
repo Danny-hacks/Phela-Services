@@ -145,6 +145,10 @@ ul{list-style:none}
 body:not(.solid-nav) .site-header:not(.scrolled) .brand-logo{
   filter:drop-shadow(0 2px 10px rgba(0,0,0,.45)) drop-shadow(0 0 1px rgba(0,0,0,.4));
 }
+/* Home logo swap: transparent over hero, white-bg badge when sticky/scrolled */
+.logo-solid{display:none}
+.site-header.scrolled .logo-hero{display:none}
+.site-header.scrolled .logo-solid{display:block}
 .nav-desktop{display:flex;gap:2rem;margin-inline:auto}
 .nav-desktop a{
   font-family:var(--font-display);font-weight:600;font-size:.95rem;color:rgba(255,255,255,.92);
@@ -211,7 +215,7 @@ body:not(.solid-nav) .site-header:not(.scrolled) .brand-logo{
   min-height:100vh;
   display:flex;align-items:center;justify-content:center;
   text-align:center;color:#fff;overflow:hidden;
-  background:url("../img/carpet-blanket.jpg") center/cover no-repeat fixed;
+  background:url("../img/rug-cleaning-home.jpg") center/cover no-repeat fixed;
 }
 .hero::before{
   content:"";position:absolute;inset:0;
