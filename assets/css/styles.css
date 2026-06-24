@@ -215,7 +215,7 @@ body:not(.solid-nav) .site-header:not(.scrolled) .brand-logo{
   min-height:100vh;
   display:flex;align-items:center;justify-content:center;
   text-align:center;color:#fff;overflow:hidden;
-  background:url("../img/rug-cleaning-home.jpg") center/cover no-repeat fixed;
+  background:url("../img/hero-home.jpg") center 20%/cover no-repeat fixed;
 }
 .hero::before{
   content:"";position:absolute;inset:0;
